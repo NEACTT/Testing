@@ -1,2 +1,2 @@
-test
-this is an update
+$webrequestdata = invoke-webrequest -uri www.google.com
+write-Output 'it worked' + $webrequestdata.content 
