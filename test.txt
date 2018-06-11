@@ -11,17 +11,23 @@ Add-Type -AssemblyName System.Windows.Forms
 $Form                            = New-Object system.Windows.Forms.Form
 $Form.ClientSize                 = '400,400'
 $Form.text                       = "Form"
+$Form.BackColor                  = "#fc3232"
 $Form.TopMost                    = $false
 
-$Label1                          = New-Object system.Windows.Forms.Label
-$Label1.text                     = "This is a test"
-$Label1.AutoSize                 = $true
-$Label1.width                    = 25
-$Label1.height                   = 10
-$Label1.location                 = New-Object System.Drawing.Point(134,166)
-$Label1.Font                     = 'Microsoft Sans Serif,10'
+$Button1                         = New-Object system.Windows.Forms.Button
+$Button1.text                    = "button"
+$Button1.width                   = 60
+$Button1.height                  = 30
+$Button1.location                = New-Object System.Drawing.Point(139,55)
+$Button1.Font                    = 'Microsoft Sans Serif,10'
 
-$Form.controls.AddRange(@($Label1))
+$ListView1                       = New-Object system.Windows.Forms.ListView
+$ListView1.text                  = "listView"
+$ListView1.width                 = 197
+$ListView1.height                = 30
+$ListView1.location              = New-Object System.Drawing.Point(107,121)
+
+$Form.controls.AddRange(@($Button1,$ListView1))
 
 #region gui events {
 #endregion events }
