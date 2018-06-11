@@ -11,23 +11,31 @@ Add-Type -AssemblyName System.Windows.Forms
 $Form                            = New-Object system.Windows.Forms.Form
 $Form.ClientSize                 = '400,400'
 $Form.text                       = "Form"
-$Form.BackColor                  = "#fc3232"
 $Form.TopMost                    = $false
+
+$TextBox1                        = New-Object system.Windows.Forms.TextBox
+$TextBox1.multiline              = $false
+$TextBox1.width                  = 100
+$TextBox1.height                 = 20
+$TextBox1.location               = New-Object System.Drawing.Point(26,36)
+$TextBox1.Font                   = 'Microsoft Sans Serif,10'
 
 $Button1                         = New-Object system.Windows.Forms.Button
 $Button1.text                    = "button"
 $Button1.width                   = 60
 $Button1.height                  = 30
-$Button1.location                = New-Object System.Drawing.Point(139,55)
+$Button1.location                = New-Object System.Drawing.Point(142,146)
 $Button1.Font                    = 'Microsoft Sans Serif,10'
 
-$ListView1                       = New-Object system.Windows.Forms.ListView
-$ListView1.text                  = "listView"
-$ListView1.width                 = 197
-$ListView1.height                = 30
-$ListView1.location              = New-Object System.Drawing.Point(107,121)
+$thisisatestt                    = New-Object system.Windows.Forms.Label
+$thisisatestt.text               = "This is a Test"
+$thisisatestt.AutoSize           = $true
+$thisisatestt.width              = 25
+$thisisatestt.height             = 10
+$thisisatestt.location           = New-Object System.Drawing.Point(90,74)
+$thisisatestt.Font               = 'Microsoft Sans Serif,10'
 
-$Form.controls.AddRange(@($Button1,$ListView1))
+$Form.controls.AddRange(@($TextBox1,$Button1,$thisisatestt))
 
 #region gui events {
 #endregion events }
