@@ -1,2 +1,34 @@
-$webrequestdata = invoke-webrequest -uri www.google.com
-write-Output 'it worked' + $webrequestdata.content 
+<# This form was created using POSHGUI.com  a free online gui designer for PowerShell
+.NAME
+    Untitled
+#>
+
+Add-Type -AssemblyName System.Windows.Forms
+[System.Windows.Forms.Application]::EnableVisualStyles()
+
+#region begin GUI{ 
+
+$Form                            = New-Object system.Windows.Forms.Form
+$Form.ClientSize                 = '400,400'
+$Form.text                       = "Form"
+$Form.TopMost                    = $false
+
+$Label1                          = New-Object system.Windows.Forms.Label
+$Label1.text                     = "This is a test"
+$Label1.AutoSize                 = $true
+$Label1.width                    = 25
+$Label1.height                   = 10
+$Label1.location                 = New-Object System.Drawing.Point(134,166)
+$Label1.Font                     = 'Microsoft Sans Serif,10'
+
+$Form.controls.AddRange(@($Label1))
+
+#region gui events {
+#endregion events }
+
+#endregion GUI }
+
+
+#Write your logic code here
+
+[void]$Form.ShowDialog()
